@@ -1,0 +1,19 @@
+
+<div><h1>{{ title }}</h1>
+
+ <img src=" ../assets/fresh-vegetables.jpeg" width="900px" height="300px" alt="">
+ <h2>Discover amazing products at the best prices!</h2>
+</div>
+   
+<div class="card" *ngFor="let product of products" >
+     <div class="image">
+       
+     </div>
+    <div class="content">
+    <h2 class="title">{{ product.name }}</h2>
+    <p class="desc">Price: {{ product.price | currency }}</p>
+    <a class="action" [routerLink]="['/product', product.id]">View Details</a>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
